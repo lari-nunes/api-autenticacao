@@ -1,7 +1,6 @@
 package com.br.larissa.apiautenticacao.model;
 
 public enum UserRole {
-
     ADMIN("admin"),
     USER("user");
 
