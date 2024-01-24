@@ -25,6 +25,12 @@ public class User implements UserDetails {
     private String password;
     private UserRole role;
 
+    public User(String login, String password, UserRole role) {
+        this.login = login;
+        this.password = password;
+        this.role = role;
+    }
+
     // neste campo, esse método irá retornar as roles de acordo com o role do usuário.
     // isso vai comparar as roles do usuário com as roles do spring security que já tem sua coleção de roles.
     @Override
