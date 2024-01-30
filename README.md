@@ -15,3 +15,16 @@ Este projeto é uma API construída usando **Java, Java Spring, Flyway Migration
 - [API Endpoints](#api-endpoints)
 - [Autenticação](#Autenticação)
 - [Banco de Dados](#database)
+
+
+## Instalação
+
+1. Clona o repository:
+
+```bash
+git clone https://github.com/Fernanda-Kipper/auth-api.git
+```
+
+2. Instale dependências com Maven
+
+3. Install [PostgresSQL](https://www.postgresql.org/)
