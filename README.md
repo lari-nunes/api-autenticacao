@@ -14,7 +14,7 @@ Este projeto é uma API construída usando **Java, Java Spring, Flyway Migration
 - [Acessar Projeto](#Acessar)
 - [API Endpoints](#api-endpoints)
 - [Autenticação](#Autenticação)
-- [Banco de Dados](#database)
+- [Database](#database)
 
 
 ## Instalação
@@ -22,9 +22,38 @@ Este projeto é uma API construída usando **Java, Java Spring, Flyway Migration
 1. Clona o repository:
 
 ```bash
-git clone https://github.com/Fernanda-Kipper/auth-api.git
+git clone https://github.com/lari-nunes/api-autenticacao.git
 ```
 
 2. Instale dependências com Maven
 
-3. Install [PostgresSQL](https://www.postgresql.org/)
+3. Instala o banco de dados [PostgresSQL](https://www.postgresql.org/)
+
+## Acessar Projeto
+1. Inicie o aplicativo com Maven
+2. A API estará acessível em http://localhost:8080
+
+## API Endpoints
+A API fornece os seguintes endpoints:
+
+```markdown
+GET /product - Recuperar uma lista de todos os produtos. (todos os usuários autenticados).
+
+POST /product - Registre um novo produto (é necessário acesso de ADMIN).
+
+POST /auth/login - Faça login na aplicativo.
+
+POST /auth/register - Cadastre um novo usuário no aplicativo.
+```
+
+## Autenticação
+A API usa Spring Security para controle de autenticação. As seguintes funções estão disponíveis:
+
+```
+USUÁRIO -> Função de usuário padrão para usuários logados.
+ADMIN -> Função administrativa para parceiros gestores (registo de novos parceiros).
+```
+- Para acessar endpoints protegidos como usuário ADMIN, forneça as credenciais de autenticação apropriadas no cabeçalho da solicitação.
+
+## Database
+O projeto utiliza [PostgresSQL](https://www.postgresql.org/) como banco de dados. As migrations de banco de dados necessárias são gerenciadas usando Flyway.
